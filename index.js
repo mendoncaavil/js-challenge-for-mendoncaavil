@@ -119,7 +119,6 @@ function validate() {
     let mainTable = document.getElementById("dataTable");
     mainTable.appendChild(tableRow);
 
-    var rowlength = 11;
 
     document.getElementById("Srn").textContent = 11;
     document.getElementById(
@@ -140,14 +139,23 @@ function validate() {
         let tableData = "";
         data.map((values) => {
           tableData += `<tr>
-              <td >${values.id}</td>
-              <td >${values.name}</td>
-              <td >${values.username}</td>
-              <td >${values.email}</td>
-              <td> ${JSON.stringify(values.address)} <td/>
-              <td >${values.phone}</td>
-              <td >${values.website}</td>
-              < td>${JSON.stringify(values.company)}</td>
+          <td >${values.id}</td>
+          <td >${values.name}</td>
+          <td >${values.username}</td>
+          <td >${values.email}</td>
+          <td> 
+          city: ${values.address.city}  
+          street: ${values.address.street}
+          suite: ${values.address.suite}
+          zipcode: ${values.address.zipcode}
+        </td>
+          <td >${values.phone}</td>
+          <td >${values.website}</td>
+          <td>
+         bs: ${values.company.bs}
+         catchPhrase: ${values.company.catchPhrase}
+         name: ${values.company.name}
+            </td>
           </tr>`;
         });
         document.getElementById("tableBody").innerHTML = tableData;
@@ -155,6 +163,14 @@ function validate() {
       });
   }
   // else{
+      //   <td >${values.id}</td>
+            //   <td >${values.name}</td>
+            //   <td >${values.username}</td>
+            //   <td >${values.email}</td>
+            //   <td> ${JSON.stringify(values.address)} <td/>
+            //   <td>${values.phone}</td>
+            //   <td >${values.website}</td>
+            //   <td>${JSON.stringify(values.company)}</td>
   //     alert('data not found')
   // }
 //   resetValidateField();
