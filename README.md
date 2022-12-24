@@ -1,1 +1,1 @@
-The user needs to fill the all the field in the form. There are validation at each input tags. After successfully validation of the data, the users data will get appeneded in the table along with the API called data.  
+The user needs to fill all the fields in the form. There are validation at each input tags. After successfully validation of the data and submitting the form, the users data will be appeneded in the table below along with the API called data.  
