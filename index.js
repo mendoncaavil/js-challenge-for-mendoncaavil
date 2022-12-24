@@ -86,23 +86,24 @@ function validate() {
   // })
   if (!error) {
     //  creating table row and table data
+    let idSrNo = document.getElementById("dataTable").rows.length-1;
     let tableRow = document.createElement("tr");
     let tableData1 = document.createElement("td");
-    tableData1.setAttribute("id", "Srn");
+    tableData1.setAttribute("id", "Srn"+idSrNo);
     let tableData2 = document.createElement("td");
-    tableData2.setAttribute("id", "displayName");
+    tableData2.setAttribute("id", "displayName"+idSrNo);
     let tableData3 = document.createElement("td");
-    tableData3.setAttribute("id", "displayUser");
+    tableData3.setAttribute("id", "displayUser"+idSrNo);
     let tableData4 = document.createElement("td");
-    tableData4.setAttribute("id", "displayEmail");
+    tableData4.setAttribute("id", "displayEmail"+idSrNo);
     let tableData5 = document.createElement("td");
-    tableData5.setAttribute("id", "displayAddres");
+    tableData5.setAttribute("id", "displayAddres"+idSrNo);
     let tableData6 = document.createElement("td");
-    tableData6.setAttribute("id", "displayPhone");
+    tableData6.setAttribute("id", "displayPhone"+idSrNo);
     let tableData7 = document.createElement("td");
-    tableData7.setAttribute("id", "displayWeb");
+    tableData7.setAttribute("id", "displayWeb"+idSrNo);
     let tableData8 = document.createElement("td");
-    tableData8.setAttribute("id", "displayComp");
+    tableData8.setAttribute("id", "displayComp"+idSrNo);
 
     tableRow.append(
       tableData1,
@@ -120,16 +121,16 @@ function validate() {
     mainTable.appendChild(tableRow);
 
 
-    document.getElementById("Srn").textContent = 11;
+    document.getElementById("Srn"+idSrNo).textContent = document.getElementById("dataTable").rows.length-1;
     document.getElementById(
-      "displayName"
+      "displayName"+idSrNo
     ).textContent = `${firstName} ${lastName}`;
-    document.getElementById("displayUser").textContent = username;
-    document.getElementById("displayEmail").textContent = email;
-    document.getElementById("displayAddres").textContent = address;
-    document.getElementById("displayPhone").textContent = phone;
-    document.getElementById("displayWeb").textContent = website;
-    document.getElementById("displayComp").textContent = comp;
+    document.getElementById("displayUser"+idSrNo).textContent = username;
+    document.getElementById("displayEmail"+idSrNo).textContent = email;
+    document.getElementById("displayAddres"+idSrNo).textContent = address;
+    document.getElementById("displayPhone"+idSrNo).textContent = phone;
+    document.getElementById("displayWeb"+idSrNo).textContent = website;
+    document.getElementById("displayComp"+idSrNo).textContent = comp;
 
    
     fetch(url)

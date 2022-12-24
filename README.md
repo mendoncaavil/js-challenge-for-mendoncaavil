@@ -1,0 +1,1 @@
+The user needs to fill the all the field in the form. There are validation at each input tags. After successfully validation of the data, the users data will get appeneded in the table along with the API called data.  

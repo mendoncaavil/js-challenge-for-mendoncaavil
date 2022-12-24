@@ -8,3 +8,9 @@
     #table-display{
         margin-top: 30px;
     }
+
+    #submit-form{
+      padding: 10px;
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
